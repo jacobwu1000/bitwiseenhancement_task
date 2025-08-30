@@ -16,4 +16,4 @@ Output files:
 
 Notes:
 - You must use OpenCV2's bitwise operations 
-- Both the logos and the background are square images. You may need to resize background image to match the size of each logo.
+- Both the logos and the background are square images. You may need to resize the background image to match the size of each logo.
