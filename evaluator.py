@@ -6,8 +6,6 @@ from datetime import datetime
 import cv2
 import numpy as np
 
-import sys
-sys.path.append(r"C:\COLA Project")
 from benchmark.core.base_evaluator import BaseEvaluator
 from benchmark.core.result_types import EvaluationResult
 
@@ -18,7 +16,7 @@ class BitwiseLogoEvaluator(BaseEvaluator):
 	
 	The agent must output three logo images with file names logo_output_1.png, 
 	logo_output_2.png, and logo_output_3.png. We evaluate by:
-	1. Generating target images using the same algorithm as evaluation.py
+	1. Generating target images using afondiel's bitwise logo manipulation algorithm
 	2. Comparing output images pixel-by-pixel with target images
 	3. Computing percentage of correctly matching pixels per image
 	
