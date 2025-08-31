@@ -1,1 +1,1 @@
-# Bitwise Enhancement task package initializer 
+# Bitwise Logo Manipulation task package initializer 
