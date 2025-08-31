@@ -1,36 +1,29 @@
 {
-  "task_id": "bitwise_enhancement",
-  "name": "Logo Manipulation",
+  "task_id": "bitwise_logo",
+  "name": "Bitwise Logo Manipulation",
   "prompt": "prompt.md",
-  "description": "Overlay a background image over the white areas of a logo using OpenCV2's bitwise operations.",
-  "difficulty": "easy",
-  "category": "image_editing",
+  "description": "Apply bitwise operations to combine logo images with background patterns. Process three logo images using thresholding, masking, and bitwise operations to create stylized output images.",
+  "difficulty": "medium",
+  "category": "image_processing",
   "input_files": [
-    "image_1.png",
-    "image_2.png",
-    "image_3.png",
+    "logo_1.png",
+    "logo_2.png",
+    "logo_3.png",
     "background.png"
   ],
   "expected_outputs": {
-    "solution_files": [
-      "image_output_1.png",
-      "image_output_2.png",
-      "image_output_3.png"
+    "output_files": [
+      "logo_output_1.png",
+      "logo_output_2.png",
+      "logo_output_3.png"
     ],
-    "format": "png",
-    "ground_truth_file": "targets.json",
-    "sample": {
-      "circles": [
-        {"image": "image_1.png", "x": 160, "y": 120, "radius": 50},
-        {"image": "image_2.png", "x": 320, "y": 240, "radius": 60},
-        {"image": "image_3.png", "x": 250, "y": 250, "radius": 40}
-      ]
-    }
+    "format": "image",
+    "description": "Three processed logo images with background patterns applied using bitwise operations"
   },
   "evaluation_criteria": {
-    "center_tolerance_pixels": 3,
-    "center_tolerance_relative": 0.02,
-    "require_all_correct": true
+    "pixel_match_threshold": 0.95,
+    "require_all_correct": true,
+    "min_fraction_correct": 0.67
   },
-  "timeout_seconds": 300
+  "timeout_seconds": 600
 } 
